@@ -20,13 +20,15 @@ def main() -> None:
         Skill(
             name="XRD-Peak-Analysis",
             description="Analyze XRD spectra and extract peaks.",
+            tags=["analysis", "compute"],
             metadata={"owner": "user"},
         )
     )
 
     task = Task(
         description="Find recent datasets for lithium-sulfur batteries and run a baseline analysis.",
-        tags=["dataset", "analysis"],
+        tags=["dataset"],
+        required_skills=["XRD-Peak-Analysis"],
     )
 
     for response in orchestrator.run(task):

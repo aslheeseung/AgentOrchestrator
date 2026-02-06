@@ -23,7 +23,7 @@ Response aggregation
 ## Example Configuration
 
 See [`example_config.yaml`](./example_config.yaml) for a minimal configuration that registers
-standard agents and user-provided skills.
+standard agents and user-provided skills, including skill tags that influence routing.
 
 ## Example Usage
 
@@ -32,3 +32,9 @@ python example_usage.py
 ```
 
 This runs a simple orchestration flow and prints the selected agents and responses.
+
+## Skill-aware Routing
+
+Skills can provide tags such as `analysis`, `compute`, or `microscopy`. When a task lists
+`required_skills`, those tags are merged into the task so the orchestrator can route to
+the most relevant agents.
