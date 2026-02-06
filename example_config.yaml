@@ -1,0 +1,23 @@
+agents:
+  - type: DatabaseAgent
+  - type: ComputationAgent
+  - type: ExperimentalAgent
+  - type: SkillIntegrationAgent
+
+skills:
+  - name: XRD-Peak-Analysis
+    description: Extract peaks from XRD patterns and match against references.
+    tags:
+      - analysis
+      - compute
+    metadata:
+      owner: user
+      domain: materials-science
+  - name: Grain-Size-Estimation
+    description: Estimate grain size from SEM images using a pretrained model.
+    tags:
+      - analysis
+      - microscopy
+    metadata:
+      owner: user
+      domain: microscopy
